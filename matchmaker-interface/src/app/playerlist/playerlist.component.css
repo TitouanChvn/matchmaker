@@ -1,0 +1,74 @@
+.player-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width : 400px;
+  }
+
+.sort-buttons {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 5px 10px;
+    width: 100%;
+    text-align: center;
+  }
+  
+.sort-buttons span {
+    margin-right: 20px;
+    flex: 1;
+    text-align: center; 
+    
+  }
+  
+  .sort-buttons span i {
+    margin-left: 5px;
+  }
+  
+  /* Icônes de flèche vers le haut et vers le bas */
+  .fa-sort-up:before {
+    content: "\f0de";
+  }
+  
+  .fa-sort-down:before {
+    content: "\f0dd"; 
+  }
+
+
+  button {
+    margin-right: 10px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+   
+  .player-list {
+    list-style : none;
+    padding: 0;
+    max-height: 550px;
+    overflow-y: auto; 
+    width: 100%;
+  }
+  
+  .player-item {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 5px 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .player-item span {
+    flex: 1;
+    text-align: center; 
+  
+  }
+
+ 
+  button:hover {
+    background-color: #eaeaea;
+  }
+  

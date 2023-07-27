@@ -1,0 +1,23 @@
+version: '3'
+services:
+  matchmaker-interface:
+    build:
+      context: ./matchmaker-interface
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
+    networks:
+      - matchmaker-network
+
+  matchmaker:
+    build:
+      context: ./matchmaker
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"  
+    networks:
+      - matchmaker-network
+
+networks:
+  matchmaker-network:
+    driver: bridge

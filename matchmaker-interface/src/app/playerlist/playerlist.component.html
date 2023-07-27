@@ -1,0 +1,23 @@
+<div class="player-list-container">
+    <div class="sort-buttons">
+      <span (click)="sortListBy('id')">ID
+        <i class="fas" [ngClass]="{'fa-sort-up': sortBy === 'id' && sortDirection === 'asc',
+                                   'fa-sort-down': sortBy === 'id' && sortDirection === 'desc',
+                                   'fa-sort': sortBy !== 'id'}"></i>
+      </span>
+      <span (click)="sortListBy('elo')">Elo
+        <i class="fas" [ngClass]="{'fa-sort-up': sortBy === 'elo' && sortDirection === 'asc',
+                                   'fa-sort-down': sortBy === 'elo' && sortDirection === 'desc',
+                                   'fa-sort': sortBy !== 'elo'}"></i>
+      </span>
+    </div>
+    <ul class="player-list">
+      <li *ngFor="let player of playerlist">
+        <div class="player-item">
+          <span>ID: {{ player.id }}</span>
+          <span>Elo: {{ player.elo }}</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
